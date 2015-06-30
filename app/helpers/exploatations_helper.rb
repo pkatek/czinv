@@ -1,0 +1,2 @@
+module ExploatationsHelper
+end

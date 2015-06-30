@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @exploatation.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @exploatation.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @exploatation.location %>
+</p>
+
+<p>
+  <strong>Barcode:</strong>
+  <%= @exploatation.barcode %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @exploatation.quantity %>
+</p>
+
+<%= link_to 'Edit', edit_exploatation_path(@exploatation) %> |
+<%= link_to 'Back', exploatations_path %>

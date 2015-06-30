@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista sprzętu</h1>
+
+
+<%= link_to 'Dodaj nowy', new_hardware_path %><br>
+<%= link_to 'Wróć', home_index_path %><br><br>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Opis</th>
+      <th>Numer seryjny</th>
+      <th>Lokalizacja</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hardwares.each do |hardware| %>
+      <tr>
+        <td><%= hardware.name %></td>
+        <td><%= hardware.description %></td>
+        <td><%= hardware.sn %></td>
+        <td><%= hardware.location %></td>
+        <td><%= link_to 'Pokaż', hardware %></td>
+        <td><%= link_to 'Edytuj', edit_hardware_path(hardware) %></td>
+        <td><%= link_to 'Usuń', hardware, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

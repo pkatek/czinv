@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nazwa:</strong>
+  <%= @hardware.name %>
+</p>
+
+<p>
+  <strong>Opis:</strong>
+  <%= @hardware.description %>
+</p>
+
+<p>
+  <strong>S/N:</strong>
+  <%= @hardware.sn %>
+</p>
+
+<p>
+  <strong>Lokalizacja:</strong>
+  <%= @hardware.location %>
+</p>
+
+<p>
+  <strong>Kod kreskowy:</strong>
+  <%= @hardware.barcode %>
+</p>
+
+<p>
+  <strong>Data utworzenia:</strong>
+  <%= @hardware.created_at %>
+</p>
+
+<p>
+  <strong>Data modyfikacji:</strong>
+  <%= @hardware.updated_at %>
+</p>
+
+<%= link_to 'Edytuj', edit_hardware_path(@hardware) %> |
+<%= link_to 'Wróć', hardwares_path %>

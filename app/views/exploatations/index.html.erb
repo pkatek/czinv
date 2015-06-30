@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Exploatations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th>Barcode</th>
+      <th>Quantity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exploatations.each do |exploatation| %>
+      <tr>
+        <td><%= exploatation.name %></td>
+        <td><%= exploatation.description %></td>
+        <td><%= exploatation.location %></td>
+        <td><%= exploatation.barcode %></td>
+        <td><%= exploatation.quantity %></td>
+        <td><%= link_to 'Show', exploatation %></td>
+        <td><%= link_to 'Edit', edit_exploatation_path(exploatation) %></td>
+        <td><%= link_to 'Destroy', exploatation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exploatation', new_exploatation_path %>
